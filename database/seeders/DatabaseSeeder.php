@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 use BrendanMacKenzie\IntegrationManager\Models\Integration;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,9 +14,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory()->create([
+        User::firstOrCreate([
             'name' => 'Wouter',
-            'email' => 'wouter@brendan-mackenzie.com',
+            'email' => 'wouter@brendan-mackenzie.com'
+        ], [
+            'password' => password_hash(Str::random(16), PASSWORD_BCRYPT),
         ]);
 
         $user = User::where('email', 'wouter@brendan-mackenzie.com')->first();
@@ -41,7 +44,7 @@ class DatabaseSeeder extends Seeder
             'base_url' => 'https://start.exactonline.nl/',
             'auth_url' => 'https://start.exactonline.nl/',
             'authorization_endpoint' => '/api/oauth2/auth',
-            'authentication_endpoint' => '/api/v1/token',
+            'authentication_endpoint' => '/api/oauth2/token',
         ]);
 
         $credentials = [

@@ -9,4 +9,6 @@ return [
         'Mr. Einstein',
         'Exact Online',
     ],
+
+    'redirect_uri' => '/integration/callback',
 ];

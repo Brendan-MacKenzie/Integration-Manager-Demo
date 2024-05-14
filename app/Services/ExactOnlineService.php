@@ -6,7 +6,6 @@ use BrendanMacKenzie\IntegrationManager\Flows\OAuthAuthorizationCodeFlow;
 use BrendanMacKenzie\IntegrationManager\Utils\ApiClient;
 use BrendanMacKenzie\IntegrationManager\Models\Integration;
 use BrendanMacKenzie\IntegrationManager\Utils\IntegrationService;
-use GuzzleHttp\Psr7\Response;
 
 class ExactOnlineService extends IntegrationService
 {
@@ -34,6 +33,7 @@ class ExactOnlineService extends IntegrationService
         $oAuthAuthorizationFlow = new OAuthAuthorizationCodeFlow(
             $this->integration,
             $this->apiClient,
+            false,
             true
         );
 
@@ -45,6 +45,6 @@ class ExactOnlineService extends IntegrationService
 
     public function getMe()
     {
-        return $this->call('GET', '/me');
+        return $this->call('GET', '/api/v1/current/Me');
     }
 }

@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Brendan-MacKenzie/Integration-Manager.git",
-                "reference": "b47e5a408b5e10965f88659cd9cb5bf9ee1da378"
+                "reference": "8ada7a6c0a89e2a114b5a8eca7a63b530d54d8db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Brendan-MacKenzie/Integration-Manager/zipball/b47e5a408b5e10965f88659cd9cb5bf9ee1da378",
-                "reference": "b47e5a408b5e10965f88659cd9cb5bf9ee1da378",
+                "url": "https://api.github.com/repos/Brendan-MacKenzie/Integration-Manager/zipball/8ada7a6c0a89e2a114b5a8eca7a63b530d54d8db",
+                "reference": "8ada7a6c0a89e2a114b5a8eca7a63b530d54d8db",
                 "shasum": ""
             },
             "require": {
@@ -61,7 +61,7 @@
                 "source": "https://github.com/Brendan-MacKenzie/Integration-Manager/tree/main",
                 "issues": "https://github.com/Brendan-MacKenzie/Integration-Manager/issues"
             },
-            "time": "2024-05-14T07:52:37+00:00"
+            "time": "2024-05-14T13:50:35+00:00"
         },
         {
             "name": "brick/math",
