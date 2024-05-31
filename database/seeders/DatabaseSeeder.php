@@ -43,7 +43,7 @@ class DatabaseSeeder extends Seeder
             'integration_option_id' => 2,
             'base_url' => 'https://start.exactonline.nl/',
             'auth_url' => 'https://start.exactonline.nl/',
-            'authorization_endpoint' => '/api/oauth2/auth',
+            'authorization_url' => 'https://start.exactonline.nl/api/oauth2/auth',
             'authentication_endpoint' => '/api/oauth2/token',
         ]);
 
