@@ -33,8 +33,9 @@ class ExactOnlineService extends IntegrationService
         $oAuthAuthorizationFlow = new OAuthAuthorizationCodeFlow(
             $this->integration,
             $this->apiClient,
-            false,
-            true
+            false,                  // Set this to true if you want to enable a state check for the authorization request.
+            true,                   // Set this to true if you want to set the body attributes to form_params instead of a JSON body.
+            true                    // Set this to true if you want to use the auth_url attribute as the base_url for the access token request. Set to false if you want to use the base_url for the access token request.
         );
 
         $authorizationUrl = $oAuthAuthorizationFlow->authenticate();
