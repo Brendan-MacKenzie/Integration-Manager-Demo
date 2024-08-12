@@ -28,7 +28,7 @@ class ExactOnlineService extends IntegrationService
         parent::__construct($this->apiClient);
     }
 
-    public function authenticate()
+    public function authenticate() 
     {
         $oAuthAuthorizationFlow = new OAuthAuthorizationCodeFlow(
             $this->integration,
@@ -36,6 +36,7 @@ class ExactOnlineService extends IntegrationService
             false,                  // Set this to true if you want to enable a state check for the authorization request.
             true,                   // Set this to true if you want to set the body attributes to form_params instead of a JSON body.
             true                    // Set this to true if you want to use the auth_url attribute as the base_url for the access token request. Set to false if you want to use the base_url for the access token request.
+            // Optional: set the $redirectUrl after the booleans.
         );
 
         $authorizationUrl = $oAuthAuthorizationFlow->authenticate();
